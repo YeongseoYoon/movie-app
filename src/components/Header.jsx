@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,7 +11,7 @@ import styles from "./Header.module.css";
 import Modal from "./Modal";
 import Login from "./Login";
 import Join from "./Join";
-import { ThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../context/ThemeContext";
 
 const useScroll = (callbackFn) => {
   useEffect(() => {
@@ -41,7 +41,7 @@ const usePreventModalPadding = (isLoginFormOpen, isJoinFormOpen) => {
 };
 
 const Header = () => {
-  const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode } = useThemeContext;
   const [isLoginFormOpen, setLoginFormOpen] = useState(false);
   const [isJoinFormOpen, setJoinFormOpen] = useState(false);
   const [isMenuToggled, setIsMenuToggled] = useState(false);

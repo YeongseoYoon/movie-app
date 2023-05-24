@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import Character from "../components/Character";
 import Loading from "../components/Loading";
 
-const useCharacterData = (id) => {
+const useCharacterData = () => {
+  const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [character, setCharacter] = useState(undefined);
 
@@ -24,8 +25,7 @@ const useCharacterData = (id) => {
 };
 
 const Detail = () => {
-  const { id } = useParams();
-  const { loading, character } = useCharacterData(id);
+  const { loading, character } = useCharacterData();
 
   return (
     <>

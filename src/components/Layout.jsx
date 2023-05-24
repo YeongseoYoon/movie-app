@@ -1,11 +1,10 @@
 import Header from "./Header";
 import styles from "./Layout.module.css";
 import DarkModeToggleButton from "./DarkModeToggleButton";
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../context/ThemeContext";
 
 const Layout = (props) => {
-  const { isDarkMode } = useContext(ThemeContext);
+  const { isDarkMode } = useThemeContext;
   return (
     <div className={`${styles.layout} ${isDarkMode ? styles.dark : ""}`}>
       <Header />
