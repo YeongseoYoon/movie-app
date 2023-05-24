@@ -1,0 +1,18 @@
+.layout {
+  padding-top: 20px;
+  background-color: white;
+  color:#1b1b1b;
+}
+
+.dark{
+  background-color: #1b1b1b;
+  color:white;
+}
+
+.main {
+  padding-top:40px;
+  min-height: calc(100vh - 56px);
+  position: relative;
+}
+
+
