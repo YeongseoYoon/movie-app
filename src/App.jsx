@@ -1,14 +1,11 @@
 import Router from "./Router";
-import { useState } from "react";
-import { ThemeContext } from "./context/ThemeContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   return (
-    <ThemeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+    <ThemeProvider>
       <Router />
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }
 export default App;
