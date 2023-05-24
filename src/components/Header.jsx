@@ -13,7 +13,7 @@ import Login from "./Login";
 import Join from "./Join";
 import { ThemeContext } from "../context/ThemeContext";
 
-const useStickyHeader = (callbackFn) => {
+const useScroll = (callbackFn) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -57,7 +57,7 @@ const Header = () => {
     setIsSmallScreen(window.innerWidth <= 768);
   });
 
-  useStickyHeader(() => {
+  useScroll(() => {
     setIsSticky(window.pageYOffset > 20);
   });
 
