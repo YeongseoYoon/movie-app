@@ -31,9 +31,9 @@ const Home = () => {
         <Loading />
       ) : (
         <div className={styles.grid_container}>
-          {characterList.map((character, index) => (
+          {characterList.map((character) => (
             <CharacterList
-              key={`${character.name}-${index}`}
+              key={`${character.name}-${character.id}`}
               id={character.id}
               name={character.name}
               description={character?.description}
