@@ -4,7 +4,7 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DarkModeToggleButton = () => {
-  const { isDarkMode, setIsDarkMode } = useThemeContext;
+  const { isDarkMode, setIsDarkMode } = useThemeContext();
 
   const handleDarkModeToggle = () => {
     setIsDarkMode((prevDarkMode) => !prevDarkMode);

@@ -41,7 +41,7 @@ const usePreventModalPadding = (isLoginFormOpen, isJoinFormOpen) => {
 };
 
 const Header = () => {
-  const { isDarkMode } = useThemeContext;
+  const { isDarkMode } = useThemeContext();
   const [isLoginFormOpen, setLoginFormOpen] = useState(false);
   const [isJoinFormOpen, setJoinFormOpen] = useState(false);
   const [isMenuToggled, setIsMenuToggled] = useState(false);

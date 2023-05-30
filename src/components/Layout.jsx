@@ -4,7 +4,7 @@ import DarkModeToggleButton from "./DarkModeToggleButton";
 import { useThemeContext } from "../context/ThemeContext";
 
 const Layout = (props) => {
-  const { isDarkMode } = useThemeContext;
+  const { isDarkMode } = useThemeContext();
   return (
     <div className={`${styles.layout} ${isDarkMode ? styles.dark : ""}`}>
       <Header />
